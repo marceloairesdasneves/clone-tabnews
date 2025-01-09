@@ -17,3 +17,9 @@ test("somar 'banana' + 100 deveria retornar 'Erro'", () => {
   //console.log(resultado);
   expect(resultado).toBe("Erro");
 });
+
+test("somar 5 + 'banana' deveria retornar 'Erro'", () => {
+  const resultado = calculadora.somar(5, "banana");
+  //console.log(resultado);
+  expect(resultado).toBe("Erro");
+});
