@@ -4,7 +4,10 @@
   "description": "Conteúdos de estudos de linguagem de programação",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run sercices:up && next dev",
+    "sercices:up": "docker compose -f infra/compose.yaml up -d",
+    "sercices:stop": "docker compose -f infra/compose.yaml stop",
+    "sercices:down": "docker compose -f infra/compose.yaml down",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
